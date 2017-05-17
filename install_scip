@@ -1,0 +1,5 @@
+#!/usr/bin/expect
+set timeout -1
+spawn make IPOPT=true LPSOPT=opt ZIMPL=false OPT=opt GMP=false ZLIB=false READLINE=false ZIMPL=false SHARED=true scipoptlib
+expect "> $" {send "/ThirdParties/Ipopt-3.12.7/build\r"; exp_continue}
+
